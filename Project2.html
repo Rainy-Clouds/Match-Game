@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Match Game</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js"></script>
+	</head>
+	
+	<body onload="initialize();">
+		<img src="casino.png" class="bg" />
+
+		<section class="gametable center">
+			<div class="header">
+				<h1 class="textpad">Match Game</h1>
+				<p id="scoretext" class="textpad">Score: 0</p>
+			</div>
+			<div class="content">
+				<div class="table">
+					<div id="grid" class="grid"></div>
+				</div>
+				<div class="menu">
+					<p>
+						Click the cards to reveal matches, match all to win. Try to get the lowest score!
+					</p>
+					<div class="diffslider">
+						<input type="range" min="3" max="8" value="4" class="slider" id="diffRange" oninput="progressScript();changeInput();">
+						<p>Difficulty</p>
+					</div>
+					<div class="buttonholder">
+						<button onclick="reset();" class="resetbutton">Reset</button>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
